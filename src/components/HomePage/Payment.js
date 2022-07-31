@@ -174,7 +174,7 @@ const Payment = () => {
                                           />
                                            <br /> <br />
                                            <input
-                                            type="tel"
+                                            type="text"
                                             name="name"
                                             placeholder="NAME"
                                             onChange={(e)=>setNAME(e.target.value)}
