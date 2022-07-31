@@ -53,14 +53,15 @@ const loginForm=(e)=>{
           email,
           password
         }).then(res=>setTimeout(() => {
-            Navigate("/login");
+          Navigate('/login');
         }, 1000))
           .catch(err=>{
           $('.exist_error').show();
         setTimeout(() => {
            $('.exist_error').hide();
         }, 5000);
-        
+          
+      })
       // }
       // if(flag==false)
       // {
