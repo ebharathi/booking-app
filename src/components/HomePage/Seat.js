@@ -202,6 +202,7 @@ const Seat = () => {
                <div className="col-sm-1"></div>
           </div>
           <br /> <br />
+          <div className='row' style={{marginTop:100}}></div>
     </div>
   )
 }
