@@ -110,6 +110,9 @@ const loginForm=(e)=>{
                         <div className="col-sm-3"></div>
                   </div>
             </div>
+            <div className="row" style={{marginBottom:500}}>
+                   
+            </div> 
     </div>
   )
 }

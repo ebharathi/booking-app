@@ -98,7 +98,7 @@ const Login = () => {
                         <div className="col-md-3"></div>
                   </div>
             </div>
-             <div className="row" style={{marginBottom:300}}>
+             <div className="row" style={{marginBottom:500}}>
                    
              </div> 
      </div>
