@@ -83,7 +83,7 @@ const loginForm=(e)=>{
                                     <div className="col-sm-4 a" style={{background:'#8c2ab0',opacity:1,padding:'20px 10px',borderTopLeftRadius:7,borderBottomLeftRadius:7}}>
                                           <h4 className='text-center' style={{fontWeight:'lighter',color:'white',paddingLeft:10}}>SIGNUP</h4>
                                           {/* <p style={{fontSize:12,paddingLeft:10,color:'#fff'}}>Already have an Account? <span className='ls' style={{color:'black',cursor:'pointer'}} onClick={()=>Navigate('/login')}>Login </span> here</p> */}
-                                          <h6 style={{fontSize:12,paddingLeft:10,color:'#fff',fontWeight:'lighter'}}>Already have an Account? <span className='ls' style={{color:'black',cursor:'pointer'}} onClick={()=>Navigate('/login')}>Login </span> here</h6>
+                                          <h6 style={{fontSize:12,paddingLeft:10,color:'#fff',fontWeight:'lighter'}}>Already have an Account? <span className='ls' style={{color:'black',cursor:'pointer',fontWeight:'bold'}} onClick={()=>Navigate('/login')}>Login </span> here</h6>
                                     </div>
                                     <div className="col-sm-8 b" style={{backgroundColor:'#ffffff',opacity:1,borderTopRightRadius:7,borderBottomRightRadius:7,padding:'30px 10px'}}>
                                           <br />
