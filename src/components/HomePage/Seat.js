@@ -54,8 +54,10 @@ const Seat = () => {
   const seatSelected=(e)=>{
       // console.log()
     // console.log(e.target.className);
-    setSelected(Array.from(new Set([...selected, e.target.className])));
-       
+    if(selected.length<5)
+    {
+      setSelected(Array.from(new Set([...selected, e.target.className])));
+    }
       }
   const remove=(e)=>{
     console.log('removed');
