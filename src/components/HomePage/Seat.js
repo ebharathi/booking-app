@@ -63,11 +63,13 @@ const Seat = () => {
     var length=selected.length;
     var detail="";
     var i=0;
+    let next=true;
     selected.map(s=>{
         var valueJQ=$(`.${s}-passenger`).val();
         if(valueJQ=="")
         {
            i--;
+           next=false;
             alert("Please Enter all the required Fields");                    
         }
         // console.log(valueJQ);
@@ -75,9 +77,12 @@ const Seat = () => {
         i++;
     })
     //  console.log(detail);
-    setTimeout(() => {
-      Navigate(`/select/user/${Userid}/seat/bus/${Busid}/payment/count/${length}/detail/${detail}`)
-    }, 500);
+    if(next=true)
+    {
+      setTimeout(() => {
+        Navigate(`/select/user/${Userid}/seat/bus/${Busid}/payment/count/${length}/detail/${detail}`)
+      }, 500);
+    }
   }
   return (
     <div className="seat">
@@ -94,10 +99,10 @@ const Seat = () => {
                         <div className="row">
                                 <div className="choose">
                                     <div className="a text-center" style={{padding:4}}>
-                                          <a href={`/select/user/${Userid}`}  style={{fontSize:15,color:'blue'}}>Select Bus</a>
+                                          <a href={`/select/user/${Userid}`}  style={{fontSize:14,color:'blue'}}>Select Bus</a>
                                     </div>
                                     <div className="b text-center btn btn-primary" style={{padding:4,borderRadius:2}}>
-                                    <a href={`/select/user/${Userid}/seat/bus/${Busid}`} style={{fontSize:17,color:'#fff'}}>Select Seat</a>
+                                    <a href={`/select/user/${Userid}/seat/bus/${Busid}`} style={{fontSize:15,color:'#fff'}}>Select Seat</a>
                                     </div>
                                     <div className="c text-center" style={{padding:4}}>
                                     <a href="#" style={{fontSize:15,color:'blue'}}>Payment</a>
