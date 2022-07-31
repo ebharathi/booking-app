@@ -53,7 +53,7 @@ const Select = () => {
                    <div className="container">
                        <div className="row">
                             <div className="choose">
-                                <div className="a text-center btn btn-primary" style={{padding:4}}>
+                                <div className="a text-center btn btn-primary" style={{padding:4,borderRadius:2}}>
                                        <a href={`/select/user/${id}`}  style={{fontSize:17,color:'#fff'}}>Select Bus</a>
                                 </div>
                                 <div className="b text-center" style={{padding:4}}>

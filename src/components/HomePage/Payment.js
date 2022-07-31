@@ -143,7 +143,7 @@ const Payment = () => {
                                     <div className="b text-center my-1" style={{padding:4}}>
                                     <a href={`/select/user/${Userid}/seat/bus/${Busid}`} style={{fontSize:15,color:'blue'}}>Select Seat</a>
                                     </div>
-                                    <div className="c text-center btn btn-primary" style={{padding:4}}>
+                                    <div className="c text-center btn btn-primary" style={{padding:4,borderRadius:2}}>
                                     <a href={locationPath} style={{fontSize:17,color:'#fff'}}>Payment</a>
                                     </div>
                                     <div className="d"></div>
@@ -201,7 +201,7 @@ const Payment = () => {
                                                   />
                                                   <br /><br />
                                               <div className="error text-danger" style={{fontWeight:'bolder',display:'none'}}>PLEASE ENTER ALL DETAILS REQUIRED!</div>
-                                              <div className="success text-success" style={{fontWeight:'bolder',display:'none'}}>SUCCESSFULLY REGISTERED!PLEASE WAIT WHILE REDIRECTING TO HOME PAGE</div>
+                                              <div className="success text-success" style={{fontWeight:'bolder',display:'none'}}>SUCCESSFULLY REGISTERED! <br/>PLEASE WAIT WHILE REDIRECTING TO HOME PAGE</div>
                                                   <div className="text-center">
                                                   <button type='submit' className='custom-btn btn-11' onClick={allDone}>PAY <div className="dot"></div> </button> 
                                                   </div>

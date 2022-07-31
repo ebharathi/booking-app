@@ -96,7 +96,7 @@ const Seat = () => {
                                     <div className="a text-center" style={{padding:4}}>
                                           <a href={`/select/user/${Userid}`}  style={{fontSize:17,color:'blue'}}>Select Bus</a>
                                     </div>
-                                    <div className="b text-center btn btn-primary" style={{padding:4}}>
+                                    <div className="b text-center btn btn-primary" style={{padding:4,borderRadius:2}}>
                                     <a href={`/select/user/${Userid}/seat/bus/${Busid}`} style={{fontSize:17,color:'#fff'}}>Select Seat</a>
                                     </div>
                                     <div className="c text-center" style={{padding:4}}>
