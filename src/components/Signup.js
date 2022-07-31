@@ -53,7 +53,10 @@ const loginForm=(e)=>{
           email,
           password
         }).then(res=>setTimeout(() => {
-          Navigate('/login');
+          $('.success').show();
+          setTimeout(() => {
+               Navigate('/login');
+          }, 5000);
         }, 1000))
           .catch(err=>{
           $('.exist_error').show();
@@ -93,6 +96,7 @@ const loginForm=(e)=>{
                                                  <input type="email" className='form-control' placeholder='Email-id' onChange={(e)=>setEmail(e.target.value)} />
                                                  <div className='email_error' style={{fontSize:10,display:'none',color:'red'}}>Please Fill the Email</div>
                                                  <div className='exist_error' style={{fontSize:10,display:'none',color:'red'}}>Email or Username Already Exist!</div>
+                                                 <div className='success' style={{fontSize:10,display:'none',color:'green'}}>Successfully Signed Up!</div>
                                                  <br />
                                                  <input type="password" className='form-control' placeholder='Password' onChange={(e)=>setPassword(e.target.value)}/>
                                                  <div className='password_error' style={{fontSize:10,display:'none',color:'red'}}>Please Fill the Password</div>
