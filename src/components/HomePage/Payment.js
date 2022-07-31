@@ -167,7 +167,7 @@ const Payment = () => {
                                            <input
                                             type="tel"
                                             name="number"
-                                            placeholder="CARD NUMBER"
+                                            placeholder="CARD NUMBER(Start with 4/5/6)"
                                             onChange={(e)=>setNUMBER(e.target.value)}
                                             onFocus={(e)=>setFOCUS(e.target.name)}
                                             style={{width:280,padding:'6px 4px',borderRadius:3,border:'1px solid grey '}}
