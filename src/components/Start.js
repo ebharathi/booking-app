@@ -30,7 +30,9 @@ const Start = () => {
                  </div>
            </div>
           </div>
+      <div className='row' style={{marginTop:200}}>
 
+      </div>
     </div>
   )
 }
