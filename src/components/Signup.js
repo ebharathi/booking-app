@@ -52,16 +52,15 @@ const loginForm=(e)=>{
           username,
           email,
           password
-        }).then(res=>console.log(res))
+        }).then(res=>setTimeout(() => {
+            Navigate("/login");
+        }, 1000))
           .catch(err=>{
           $('.exist_error').show();
         setTimeout(() => {
            $('.exist_error').hide();
         }, 5000);
-          setTimeout(() => {
-            Navigate('/login');
-          }, 1000);
-          })
+        
       // }
       // if(flag==false)
       // {
