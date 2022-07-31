@@ -94,13 +94,13 @@ const Seat = () => {
                         <div className="row">
                                 <div className="choose">
                                     <div className="a text-center" style={{padding:4}}>
-                                          <a href={`/select/user/${Userid}`}  style={{fontSize:17,color:'blue'}}>Select Bus</a>
+                                          <a href={`/select/user/${Userid}`}  style={{fontSize:15,color:'blue'}}>Select Bus</a>
                                     </div>
                                     <div className="b text-center btn btn-primary" style={{padding:4,borderRadius:2}}>
                                     <a href={`/select/user/${Userid}/seat/bus/${Busid}`} style={{fontSize:17,color:'#fff'}}>Select Seat</a>
                                     </div>
                                     <div className="c text-center" style={{padding:4}}>
-                                    <a href="#" style={{fontSize:17,color:'blue'}}>Payment</a>
+                                    <a href="#" style={{fontSize:15,color:'blue'}}>Payment</a>
                                     </div>
                                     <div className="d"></div>
                                 </div>

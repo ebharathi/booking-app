@@ -57,10 +57,10 @@ const Select = () => {
                                        <a href={`/select/user/${id}`}  style={{fontSize:17,color:'#fff'}}>Select Bus</a>
                                 </div>
                                 <div className="b text-center" style={{padding:4}}>
-                                <a href="#" style={{fontSize:17,color:'blue'}}>Select Seat</a>
+                                <a href="#" style={{fontSize:15,color:'blue'}}>Select Seat</a>
                                 </div>
                                 <div className="c text-center" style={{padding:4}}>
-                                <a href="#" style={{fontSize:17,color:'blue'}}>Payment</a>
+                                <a href="#" style={{fontSize:15,color:'blue'}}>Payment</a>
                                 </div>
                                 <div className="d"></div>
                             </div>
