@@ -57,6 +57,21 @@ const Seat = () => {
     setSelected(Array.from(new Set([...selected, e.target.className])));
        
       }
+  const remove=(e)=>{
+    console.log('removed');
+    var array1 =selected;
+    var array2 =[e.target.className];
+    
+    for (var i = 0; i<array2.length; i++) {
+        var arrlen = array1.length;
+        for (var j = 0; j<arrlen; j++) {
+            if (array2[i] == array1[j]) {
+                array1 = array1.slice(0, j).concat(array1.slice(j+1, arrlen));
+            }
+        }
+    }
+    setSelected(array1);
+  }
   // console.log(selected)
   //move to Payment Page
   const nextPage=()=>{
@@ -143,6 +158,7 @@ const Seat = () => {
                                                                             selected!=""?
                                                                             selected.map(s=>
                                                                                 <div className="container">
+                                                                                   <span style={{float:'right',fontSize:19,cursor:'pointer',fontWeight:'bold'}} className={s} onClick={remove}>x</span>
                                                                                    <h6 className='text-center details' style={{fontWeight:'bold'}}>Seat No:{s}</h6>
                                                                                    <input type="text" className={`my-1 ${s}-passenger`} placeholder='Enter Passenger name'  style={{width:'200px',height:'35px',borderRadius:4}}/>
                                                                                    <br />
