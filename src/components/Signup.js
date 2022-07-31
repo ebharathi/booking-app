@@ -59,8 +59,8 @@ const loginForm=(e)=>{
            $('.exist_error').hide();
         }, 5000);
           setTimeout(() => {
-            Navigate('/signup');
-          }, 6000);
+            Navigate('/login');
+          }, 1000);
           })
       // }
       // if(flag==false)
