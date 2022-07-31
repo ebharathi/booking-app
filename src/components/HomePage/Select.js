@@ -54,7 +54,7 @@ const Select = () => {
                        <div className="row">
                             <div className="choose">
                                 <div className="a text-center btn btn-primary" style={{padding:4,borderRadius:2}}>
-                                       <a href={`/select/user/${id}`}  style={{fontSize:17,color:'#fff'}}>Select Bus</a>
+                                       <a href={`/select/user/${id}`}  style={{fontSize:17,color:'#ffffff'}}>Select Bus</a>
                                 </div>
                                 <div className="b text-center" style={{padding:4}}>
                                 <a href="#" style={{fontSize:15,color:'blue'}}>Select Seat</a>
