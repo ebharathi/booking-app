@@ -1,0 +1,76 @@
+.changingTitle::before{
+      content: "";
+      font-size: 35px;
+      font-weight: bold;
+      animation: title 20s  infinite;
+}
+@keyframes title {
+      0%{
+            content: "UNIQUE";
+            opacity: 1;
+      }
+      25%{
+            content: "UNIQUE";
+            opacity: 0.5;
+      }
+      40%{
+            content: "";
+            opacity: 0;
+      }
+      50%{
+            content:"SAFELY";
+            opacity:1;
+      }
+
+      65%{
+            content: "";
+            opacity:0; 
+      }
+      80%{
+            content: "FASTER";
+            opacity: 1;
+      }
+      90%{
+           opacity: 0;
+      }
+     100%{
+           content: "";
+           opacity: 0.5;
+     }
+}
+
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 24px;
+    }
+    
+    .p {
+      /* font-weight: 700; */
+      /* text-align: center; */
+      /* font-size: 22px !important; */
+      /* font-family: Hack, sans-serif; */
+      text-transform: uppercase;
+      background: linear-gradient(90deg, rgb(0, 0, 0), #fff, #000);
+      letter-spacing: 5px;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-repeat: no-repeat;
+      background-size: 80%;
+      animation: shine 5s linear infinite;
+      position: relative;
+    }
+    
+    @keyframes shine {
+      0% {
+        background-position-x: -500%;
+      }
+      100% {
+        background-position-x: 500%;
+      }
+    }
+    
+    /*  Checkout my other pens on  https://codepen.io/grohit/  */
+    

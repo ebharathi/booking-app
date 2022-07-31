@@ -1,0 +1,140 @@
+/* <!--circle--> */
+.main-circle{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.circle {
+	position: relative;
+    display: block;
+	height: 100px;
+	width: 100px;
+	top: 50%;
+	left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+	border: 2px solid transparent;
+	border-top-color: #e84393;
+	border-radius: 50%;
+	animation: round 2s linear infinite;
+	-webkit-animation: round 2s linear infinite;
+}
+
+.circle:before {
+	content: '';
+	position: absolute;
+	border: 2px solid transparent;
+	border-top-color: #ff7675;
+	border-radius: 50%;
+	animation: round 3s linear infinite;
+	-webkit-animation: round 3s linear infinite;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+}
+
+.circle:after {
+	content: '';
+	position: absolute;
+	border: 2px solid transparent;
+	border-top-color: #6c5ce7;
+	border-radius: 50%;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	animation: round 1.5s linear infinite;
+	-webkit-animation: round 1.5s linear infinite;
+}
+
+@keyframes round{
+	0%{
+		transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+	}
+
+	100%{
+		transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes round{
+	0%{
+		transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+	}
+
+	100%{
+		transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+	}
+}
+/* loading */
+
+.line {
+	position: relative;
+	height: 2px;
+	width: 600px;
+	margin: auto;
+	margin-top: 300px;
+	border: 2px solid whitesmoke;
+}
+
+.box {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	border: 1px solid whitesmoke;
+	top: -35px;
+	left: 0px;
+	border-radius: 15%;
+	background-color: #fff;
+	animation: roll 3s linear infinite;
+}
+
+p {
+	position: absolute;
+	top: -30px;
+	right: -87px;
+	font-size: 25px;
+	color: #222f3e;
+	font-weight: bold;
+
+
+}
+
+@keyframes roll {
+	0%{
+		left: 0;
+	}
+
+	50%{
+		left: 100%;
+		transition-delay: 2s;
+		transform: rotate(360deg);
+		width: 100px;
+		height: 100px;
+	}
+
+	75%{
+		left: 100%;
+		width: 100px;
+		height: 100px;
+	}
+
+	100%{
+		left: 0;
+		transform: rotate(-360deg);
+
+	}
+
+}

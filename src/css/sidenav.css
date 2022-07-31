@@ -1,0 +1,60 @@
+/*function */
+
+
+/* const openNav=()=>{
+      document.querySelector('.sidenav').style.width="250px";
+}
+const closeNav=()=>{
+      document.querySelector('.sidenav').style.width="0px";
+
+} */
+
+/*HTML*/
+/* <div className='sidebar mx-3'>
+<span style={{fontSize:30,cursor:'pointer',color:'black'}} onClick={openNav}>&#9776;</span>
+<div className="sidenav">
+      <a href="#" className='closebtn' onClick={closeNav}>&times;</a>
+      <br />
+      <a href="/about">About</a>
+      
+</div>
+</div> */
+
+
+/*CSS*/
+.sidebar{
+      display: none;
+}
+@media only screen and (max-width:768px)
+  {
+    .sidebar{
+      display: block;
+    }
+  }
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}

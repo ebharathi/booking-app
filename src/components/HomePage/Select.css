@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap');
+
+.details{
+      font-family: 'Cormorant SC', serif;
+}
+
+.choose{
+      display: flex;
+}
+.a{
+      flex: 1;
+}
+.b{
+      flex: 1;
+}
+.c{
+      flex: 1;
+}
+.d{
+      flex: 4;
+}
+@media only screen and (max-width:822px) {
+      .d{
+            flex:2 ;
+      }
+}
+@media only screen and (max-width:784px) {
+      .d{
+            flex:1 ;
+      }
+}
+@media only screen and (max-width:390px) {
+      .d{
+            display: none ;
+      }
+}
