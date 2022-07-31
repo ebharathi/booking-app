@@ -26,7 +26,7 @@ const Seat = () => {
   useEffect(()=>{
      axios.get("https://booking-app-serverside.herokuapp.com/login/")
           .then((res)=>setUserdata(res.data))
-     axios.get("https://booking-app-serverside.herokuapp.com/")
+     axios.get("https://booking-app-serverside.herokuapp.com/bus/")
           .then((res)=>setBusdata(res.data))
          setFlag(true);
 
