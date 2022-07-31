@@ -58,9 +58,9 @@ const loginForm=(e)=>{
         setTimeout(() => {
            $('.exist_error').hide();
         }, 5000);
-          // setTimeout(() => {
-          //   Navigate('/signup');
-          // }, 6000);
+          setTimeout(() => {
+            Navigate('/signup');
+          }, 6000);
           })
       // }
       // if(flag==false)
