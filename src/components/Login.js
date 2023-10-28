@@ -38,7 +38,7 @@ const Login = () => {
              if(email!=="" &&password!=="")
              {
                    console.log(data)
-                   axios.post(`${process.env.REACT_APP_BACKEND}/login`,{email:email,password:password})
+                   axios.post(`https://booking-app-backend-node-js-postgre-sqll.vercel.app/login`,{email:email,password:password})
                    .then((response)=>{
                         console.log("RESPONSE FOR LOGIN from backend",response)
                         if(response.data.error==false)

@@ -48,7 +48,7 @@ const loginForm=(e)=>{
       // data.map(d=>d.email==email?setFlag(false):'');
       // if(flag==true)
       // {
-        axios.post(`${process.env.REACT_APP_BACKEND}/signup`,{
+        axios.post(`https://booking-app-backend-node-js-postgre-sqll.vercel.app/signup`,{
           username,
           email,
           password

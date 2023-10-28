@@ -15,7 +15,7 @@ const Bus=()=>{
     let {id,userid}=useParams()
     useEffect(()=>{
         async function get(){
-            await axios.get(`${process.env.REACT_APP_BACKEND}/bus`)
+            await axios.get(`https://booking-app-backend-node-js-postgre-sqll.vercel.app/bus`)
             .then(res=>{
                 if(res.data.error==false)
                   {
@@ -38,7 +38,7 @@ const Bus=()=>{
         get()
         async function getSeats()
         {
-            await axios.get(`${process.env.REACT_APP_BACKEND}/bus/seat/${id}`)
+            await axios.get(`https://booking-app-backend-node-js-postgre-sqll.vercel.app/bus/seat/${id}`)
             .then((res)=>{
                 console.log("resp for seats",res.data);
                 if(res.data.error==false)

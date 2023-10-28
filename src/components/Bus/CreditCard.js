@@ -41,7 +41,7 @@ const CreditCard=()=>{
                     busId:id,
                     seats:s
                   }
-                    await axios.post(`${process.env.REACT_APP_BACKEND}/bus/update`,data)
+                    await axios.post(`https://booking-app-backend-node-js-postgre-sqll.vercel.app/bus/update`,data)
                     .then((response)=>{
                       console.log("response for payment-->",response.data)
                       if(response.data.error==false)
