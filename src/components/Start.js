@@ -9,7 +9,7 @@ const Start = () => {
      const start=()=>{
               setTimeout(() => {
                    Navigate('/login') 
-              }, 2000);
+              }, 100);
      }
   return (
     <div className='Start'>

@@ -13,10 +13,10 @@ const Login = () => {
       const Navigate=useNavigate();
    
      //ueEffect
-     useEffect(()=>{
-      axios.get('https://booking-app-serverside.herokuapp.com/login')
-      .then(response=>setData(response.data));
-     },[])
+//      useEffect(()=>{
+//       axios.get('http://localhost:9000/login')
+//       .then(response=>setData(response.data));
+//      },[])
 
       //functions
       const loginFunction=(e)=>{
@@ -38,29 +38,23 @@ const Login = () => {
              if(email!=="" &&password!=="")
              {
                    console.log(data)
-                   data.map((d)=>{
-                         if(d.email==email)
-                         {
-                               if(d.password==password)
-                               {
-                                            Navigate(`/select/user/${d._id}`)
-                               }
-                               else
-                               {
-                                    $('.match_error').show();
-                                    setTimeout(() => {
-                                    $('.match_error').hide();
-                                    }, 5000); 
-                               }
-                         }
-                         else
-                               {
-                                    $('.match_error').show();
-                                    setTimeout(() => {
-                                    $('.match_error').hide();
-                                    }, 5000); 
-                               }
-                        
+                   axios.post('http://localhost:9000/login',{email:email,password:password})
+                   .then((response)=>{
+                        console.log("RESPONSE FOR LOGIN from backend",response)
+                        if(response.data.error==false)
+                        {
+                              console.log("LOGIN CORRECT")
+                              Navigate(`/home/${response.data.userId}`)
+
+                        }
+                        else
+                        {
+                              $('.match_error').show();
+                              setTimeout(() => {
+                              $('.match_error').hide();
+                              }, 5000); 
+
+                        }
                    })
              }
       }

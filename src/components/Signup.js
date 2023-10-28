@@ -48,15 +48,27 @@ const loginForm=(e)=>{
       // data.map(d=>d.email==email?setFlag(false):'');
       // if(flag==true)
       // {
-        axios.post('https://booking-app-serverside.herokuapp.com/login/add',{
+        axios.post('http://localhost:9000/signup',{
           username,
           email,
           password
         }).then(res=>setTimeout(() => {
-          $('.success').show();
-          setTimeout(() => {
-               Navigate('/login');
-          }, 5000);
+            if(res.data.error==false)
+            {
+              $('.success').show();
+              setTimeout(() => {
+                console.log(res);
+                localStorage.setItem('user',res.data.userId);
+                console.log("storage set[+]");
+                 Navigate('/login');
+              },2000);
+            }
+            else{
+              $('.exist_error').show();
+              setTimeout(() => {
+                 $('.exist_error').hide();
+              }, 5000);
+            }
         }, 1000))
           .catch(err=>{
           $('.exist_error').show();
