@@ -1,7 +1,8 @@
+import Navbar from "../Nav";
 const Home=()=>{
     return (
         <div>
-            Home
+            <Navbar/>
         </div>
     )
 }
