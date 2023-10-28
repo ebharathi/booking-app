@@ -35,7 +35,7 @@ const Select=()=>{
                                 <br/>
                                 <span className="">{single?.departuretime}</span>
                                 <br/>
-                                <a href="#" className="btn btn-5 text-white">Book</a>
+                                <a href={`/bus/${single.id}`} className="btn btn-5 text-white">Book</a>
                             </div>
                             </div>
                         </div>
