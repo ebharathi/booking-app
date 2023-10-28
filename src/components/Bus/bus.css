@@ -32,3 +32,10 @@
     font-size: 25px;
     border-bottom: 2px solid cornflowerblue;
 }
+.disabled-element {
+    pointer-events: none;
+  }
+  input{
+    padding: 5px 14px;
+    /* border-radius: ; */
+  }

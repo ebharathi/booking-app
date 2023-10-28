@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import { useParams } from "react-router-dom";
 const Select=()=>{
+    const {userid}=useParams()
     const [data,setData]=useState([]);
     useEffect(()=>{
         async function get(){
@@ -35,7 +36,7 @@ const Select=()=>{
                                 <br/>
                                 <span className="">{single?.departuretime}</span>
                                 <br/>
-                                <a href={`/bus/${single.id}`} className="btn btn-5 text-white">Book</a>
+                                <a href={`/user/${userid}/bus/${single.id}`} className="btn btn-5 text-white">Book</a>
                             </div>
                             </div>
                         </div>

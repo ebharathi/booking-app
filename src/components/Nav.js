@@ -1,16 +1,16 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
-const Navbar=()=>{
+const Navbar=({userId=1})=>{
     const [data,setData]=useState({});
     useEffect(()=>{
         async function getUser()
         {
-            await axios.get(`http://localhost:9000/user/${3}`)
+            await axios.get(`http://localhost:9000/user/${userId}`)
             .then((resp)=>{
                 console.log(resp,"rep");
                 if(resp.data.error==false)
                  setData(resp.data.userData)
+                localStorage.setItem('user_id',userId)
             })
         }
     getUser()

@@ -18,7 +18,7 @@ const Seat=({onClick,data,selectedSeats})=>{
     },[selectedSeats])
     return (
         <div className="col-4 seat">
-          <div className={data.isSelected?'selected':on?'now-selected':''} onClick={()=>onClick(data?.id)}>
+          <div className={data.isselected?'selected disabled-element ':on?'now-selected':''} onClick={()=>onClick(data?.id)}>
             {data?.name}
          </div> 
         </div>

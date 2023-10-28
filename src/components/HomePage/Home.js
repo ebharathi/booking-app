@@ -1,9 +1,11 @@
 import Navbar from "../Nav";
 import Select from "./Select";
+import { useParams } from "react-router-dom";
 const Home=()=>{
+    const {userid}=useParams()
     return (
         <div>
-            <Navbar/>
+            <Navbar userId={userid}/>
             <br/>
             <Select/>
         </div>

@@ -4,14 +4,15 @@ import Seat from "./Seat";
 import Choose from "./Choose";
 import './bus.css'
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 const Bus=()=>{
+    const Navigate=useNavigate()
     const [data,setData]=useState({})
     const [seats,setSeats]=useState([])
     const [selectedSeats,setSelectedSeats]=useState([])
     const [error,setError]=useState("");
     const [btn,setBtn]=useState("BOOK")
-    let {id}=useParams()
+    let {id,userid}=useParams()
     useEffect(()=>{
         async function get(){
             await axios.get('http://localhost:9000/bus')
@@ -37,7 +38,7 @@ const Bus=()=>{
         get()
         async function getSeats()
         {
-            await axios.get('http://localhost:9000/bus/seat/11')
+            await axios.get(`http://localhost:9000/bus/seat/${id}`)
             .then((res)=>{
                 console.log("resp for seats",res.data);
                 if(res.data.error==false)
@@ -67,20 +68,27 @@ const Bus=()=>{
             console.log("d---",id);
             setSelectedSeats(selectedSeats.filter(item=>item?.id!=id))
     }
-    const bookSeat=()=>{
+    const bookSeat=async()=>{
         setError(" ");
         setBtn("PLEASE WAIT..")
+        console.log("[+]Booking called");
         if(selectedSeats.length==0)
          {
              setBtn("BOOK")
              setError("Please select atleast one seat!!")
              return;
          } 
-        console.log("[+]Booking called");
+         else
+         {
+             localStorage.setItem("seats",JSON.stringify(selectedSeats));
+             setTimeout(() => {
+                 Navigate(`/user/${userid}/payment/${id}`)
+             }, 2000);
+         }
     }
     return (
         <div>
-            <Navbar/>
+            <Navbar userId={userid}/>
             <br/>
             <div className="bus-margin">
                   <div className="row">
