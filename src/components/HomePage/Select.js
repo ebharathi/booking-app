@@ -6,7 +6,7 @@ const Select=()=>{
     const [data,setData]=useState([]);
     useEffect(()=>{
         async function get(){
-            await axios.get('http://localhost:9000/bus')
+            await axios.get('https://booking-app-backend-node-js-postgre-sqll.vercel.app/bus')
             .then(res=>{
                 if(res.data.error==false)
                   {
