@@ -15,7 +15,7 @@ const Bus=()=>{
     let {id,userid}=useParams()
     useEffect(()=>{
         async function get(){
-            await axios.get('http://localhost:9000/bus')
+            await axios.get(`${process.env.REACT_APP_BACKEND}/bus`)
             .then(res=>{
                 if(res.data.error==false)
                   {
@@ -38,7 +38,7 @@ const Bus=()=>{
         get()
         async function getSeats()
         {
-            await axios.get(`http://localhost:9000/bus/seat/${id}`)
+            await axios.get(`${process.env.REACT_APP_BACKEND}/bus/seat/${id}`)
             .then((res)=>{
                 console.log("resp for seats",res.data);
                 if(res.data.error==false)
@@ -53,7 +53,12 @@ const Bus=()=>{
          console.log("selected---?",id);
             console.log("alread-->",selectedSeats)
          setError("");
-         const newSeat = seats[id-1];
+         let newSeat;
+         for(let i=0;i<seats.length;i++)
+        {
+            if(seats[i].id==id)
+             newSeat=seats[i]
+        }
          const selectedSeatsSet = new Set(selectedSeats);
          selectedSeatsSet.add(newSeat);
          const updatedSelectedSeats = Array.from(selectedSeatsSet);

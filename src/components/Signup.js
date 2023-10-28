@@ -48,7 +48,7 @@ const loginForm=(e)=>{
       // data.map(d=>d.email==email?setFlag(false):'');
       // if(flag==true)
       // {
-        axios.post('http://localhost:9000/signup',{
+        axios.post(`${process.env.REACT_APP_BACKEND}/signup`,{
           username,
           email,
           password

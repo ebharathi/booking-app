@@ -5,7 +5,7 @@ const Navbar=({userId=1})=>{
     useEffect(()=>{
         async function getUser()
         {
-            await axios.get(`http://localhost:9000/user/${userId}`)
+            await axios.get(`${process.env.REACT_APP_BACKEND}/user/${userId}`)
             .then((resp)=>{
                 console.log(resp,"rep");
                 if(resp.data.error==false)

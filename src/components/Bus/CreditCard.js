@@ -41,14 +41,14 @@ const CreditCard=()=>{
                     busId:id,
                     seats:s
                   }
-                    await axios.post('http://localhost:9000/bus/update',data)
+                    await axios.post(`${process.env.REACT_APP_BACKEND}/bus/update`,data)
                     .then((response)=>{
                       console.log("response for payment-->",response.data)
                       if(response.data.error==false)
                       {
                           setSuccess("SEAT BOOKING CONFIRMED. REDIRECTING....")
                           setTimeout(() => {
-                              Navigate(`/home/3`)
+                              Navigate(`/home/${userid}`)
                           }, 3000);
                           
                       }
