@@ -2,6 +2,20 @@
     margin-top: 50px;
    padding: 5px 300px;
 }
+@media screen and (max-width:1200px)
+{
+    .bus-margin{
+        margin-top: 50px;
+       padding: 5px 10px !important;
+    }
+
+}
+@media screen and (max-width:568px) {
+     .aa{
+        display: none;
+     }
+}
+
 .left{
     background-color: rgba(255, 255, 255, 0.5);
 }

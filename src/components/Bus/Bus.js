@@ -92,15 +92,15 @@ const Bus=()=>{
             <br/>
             <div className="bus-margin">
                   <div className="row">
-                          <div className="col-3" ></div>
-                          <div className="col-3 left row " style={{padding:'50px 1px'}} >
+                          <div className="aa col-sm-0 col-md-1 col-lg-3" ></div>
+                          <div className="col-6 col-sm-6 col-md-5 col-lg-3 left row " style={{padding:'50px 0px'}} >
                                 { 
                                     seats.map((s)=>
                                      <Seat onClick={addSelectedSeats} selectedSeats={selectedSeats} data={s}/>
                                     )
                                  }
                           </div>
-                          <div className="col-3 left p-5" >
+                          <div className="col-6 col-sm-6 col-md-5 col-lg-3 left p-5" >
                               <span className="bus-title">
                                 {data?.name?.toUpperCase()}
                               </span>
@@ -128,7 +128,7 @@ const Bus=()=>{
                               <br/>
                               <button className="btn btn-13" onClick={bookSeat}>{btn}</button>
                            </div>
-                          <div className="col-3" ></div>
+                          <div className="aa col-0 col-md-1 col-lg-3"  ></div>
                   </div>
             </div>
         </div>
