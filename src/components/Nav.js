@@ -19,7 +19,7 @@ const Navbar=()=>{
         <nav className="" style={{backgroundColor:'#93adc6',padding:5}}>
            <div style={{display:'flex',justifyContent:'right'}}>
                 <span style={{padding:'5px 10px',color:'grey'}}>
-                  {data?.name.toUpperCase()}
+                  {data?.name?.toUpperCase()}
                 </span>
            </div>
       </nav>
